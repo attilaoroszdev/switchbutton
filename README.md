@@ -75,7 +75,11 @@ import com.atlanticomnibus.switchbutton.SwitchButton;
 
 /* ... */
 
-SwitchButton switchButton = new SwitchButton(this);
+Context mContext;
+
+/* ... */
+
+SwitchButton switchButton = new SwitchButton(mContext);
     switchButton.setSwitchPosition(SwitchButton.SWITCH_END);
     switchButton.setChecked(true);
     switchButton.setEnabled(true);
