@@ -1,6 +1,8 @@
-## SwitchButton - A Button with a Switch
+# SwitchButton - A Button with a Switch
 
 And Android compound Widget combining a Button and a Switch into a convenient, easy-to-use single widget. You can easily set the position of the switch (start or end of the text) and the distance between the switch and text (padding).
+
+Note for GitHub users: The main development hub for this library is on [GitLab](https://gitlab.com/atlantic_omnibus/open-source/switch-button), which is an **open source** DevOps platform. the repository automatically gets pushed to GitHUb as well for better discoverability. You are welcome to open any issues on GH, but if you want to contribute, please visit the [GitLab repo](https://gitlab.com/atlantic_omnibus/open-source/switch-button).
 
 ## Screenshots
 
@@ -15,8 +17,41 @@ Buttons set to `MATCH_PARENT` will align switches on the far side and break butt
 
 ## Add SwitchButton to your project
 
-*Jcenter instructions coming soon*
+### JFrog Bintray
 
+[ ![Download](https://api.bintray.com/packages/atlantic-omnibus/androidosslibs/switchbutton/images/download.svg) ](https://bintray.com/atlantic-omnibus/androidosslibs/switchbutton/_latestVersion)
+
+### Jcenter
+
+make sure you have `jcenter()` in your project level `build.gradle`, like so:
+```Gradle
+buildscript {
+    repositories {
+    
+        /*...*/
+        
+        jcenter()
+        
+        /*...*/
+    }
+    
+    /*...*/
+} 
+``` 
+
+Then in your app/module level `build.gradle`:
+    
+```Gradle
+dependencies {
+
+    /*...*/
+    
+    implementation 'com.gitlab.atlanticomnibus:switchbutton:1.0.1'
+    
+    /*...*/
+     
+} 
+```
 ## Example Usage
 
 ### XML
@@ -54,6 +89,7 @@ SwitchButton switchButton = new SwitchButton(this);
             }
     });
 ```
+
 
 ## Public methods
 
