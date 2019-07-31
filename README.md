@@ -81,6 +81,7 @@ SwitchButton switchButton = new SwitchButton(this);
     switchButton.setEnabled(true);
     switchButton.setButtonText(R.string.button_text);
     switchButton.setSwitchPadding(24);
+    /*or*/
     switchButton.setSwitchPadding(TypedValue.COMPLEX_UNIT_DIP, 24);
     switchButton.setCheckedChangeListener(new SwitchButton.OnCheckedChangeListener() {
             @Override
