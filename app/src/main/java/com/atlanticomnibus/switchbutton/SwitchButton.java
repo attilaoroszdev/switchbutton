@@ -56,12 +56,12 @@ public class SwitchButton extends LinearLayout {
 
 
     /**************************************Public constants****************************************/
-    public static final int SWITCH_START=0,
-            SWITCH_END=1;
+    private static final int SWITCH_START=0;
+    private static final int SWITCH_END=1;
 
     /*************************************Private constants****************************************/
     private final int DEFAULT_SWITCH_PADDING,
-            VIEW_VERTICAL_PADDING;
+                      VIEW_VERTICAL_PADDING;
 
 
 
@@ -70,12 +70,12 @@ public class SwitchButton extends LinearLayout {
     /**@hide */
     @IntDef({TypedValue.COMPLEX_UNIT_PX, TypedValue.COMPLEX_UNIT_DIP, TypedValue.COMPLEX_UNIT_SP, TypedValue.COMPLEX_UNIT_PT, TypedValue.COMPLEX_UNIT_IN, TypedValue.COMPLEX_UNIT_MM})
     @Retention(RetentionPolicy.SOURCE)
-    public @interface ValidSizeUnit{}
+    private @interface ValidSizeUnit{}
 
     /**@hide */
     @IntDef({SWITCH_START, SWITCH_END})
     @Retention(RetentionPolicy.SOURCE)
-    public @interface SwitchTogglePosition{}
+    private @interface SwitchTogglePosition{}
 
 
     /*************************************Component views******************************************/
@@ -306,7 +306,7 @@ public class SwitchButton extends LinearLayout {
      * <p>Mimics the {@link android.widget.Switch} class's {@link android.widget.Switch#toggle()} method. OK, not really, but has the same result, calling {@link android.widget.Switch#toggle()} on the
      * {@link android.widget.Switch} component view</p>
      */
-    public void toggle(){
+    private void toggle(){
         switchToggle.toggle();
         isChecked=switchToggle.isChecked();
     }
@@ -336,7 +336,7 @@ public class SwitchButton extends LinearLayout {
      *
      * @param switchPosition Either {@link this#SWITCH_START} ({@value SWITCH_START}), or {@link this#SWITCH_END} ({@value SWITCH_END})
      */
-    public void setSwitchPosition(@SwitchTogglePosition int switchPosition) {
+    private void setSwitchPosition(@SwitchTogglePosition int switchPosition) {
 
         /**
          * Note for the discerning developer: The original approach was to have SwitchButton extend ConstraintLayot
@@ -381,7 +381,7 @@ public class SwitchButton extends LinearLayout {
      *
      * @param buttonText the text to set, as {@link String}
      */
-    public void setButtonText(String buttonText) {
+    private void setButtonText(String buttonText) {
         setText(buttonText);
     }
 
@@ -542,13 +542,13 @@ public class SwitchButton extends LinearLayout {
     /**
      * Probably superfluous static constants for the bundle values
      */
-    private static String SWITCH_POSITION_VALUE="SwitchPosition",
-            BUTTON_TEXT_VALUE="ButtonText",
-            IS_CHECKED_VALUE="IsChecked",
-            IS_ENABLED_VALUE="IsEnabled",
-            IS_DYNAMICALLY_CREATED_VALUE="IsDynamicallyCreated";
+    private static final String SWITCH_POSITION_VALUE="SwitchPosition";
+    private static final String BUTTON_TEXT_VALUE="ButtonText";
+    private static final String IS_CHECKED_VALUE="IsChecked";
+    private static final String IS_ENABLED_VALUE="IsEnabled";
+    private static final String IS_DYNAMICALLY_CREATED_VALUE="IsDynamicallyCreated";
 
-    private static String STATE_SUPER_CLASS = "SuperClass";
+    private static final String STATE_SUPER_CLASS = "SuperClass";
 
     /**
      * <p>We don't really like the original {@link super#onSaveInstanceState} so we override it, and tell it to save everything of interest.<br />

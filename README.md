@@ -2,8 +2,6 @@
 
 And Android compound Widget combining a Button and a Switch into a convenient, easy-to-use single widget. You can easily set the position of the switch (start or end of the text) and the distance between the switch and text (padding).
 
-Note for GitHub users: The main development hub for this library is on [GitLab](https://gitlab.com/atlantic_omnibus/open-source/switch-button), which is an **open source** DevOps platform. the repository automatically gets pushed to GitHUb as well for better discoverability. You are welcome to open any issues on GH, but if you want to contribute, please visit the [GitLab repo](https://gitlab.com/atlantic_omnibus/open-source/switch-button).
-
 ## Screenshots
 
 Buttons set to `WRAP_CONTENT` will have raged edges on the far side
@@ -120,3 +118,14 @@ In alphabetical order
 | void                                 | setSwitchPadding(int unit,                 int padding)      | Set The `Switch` component's padding (its distance from the button text) in any valid unit. |
 | void                                 | setSwitchPosition(int switchPosition)                        | Allows you to dynamically set the position of the Switch component.<br /> Accepts a single integer parameter, that should use public constants `SWITCH_START` (0) and `SWITCH_END` (1). If `SWITCH_START` (or 0) is passed, it will position the Switch component to the start of the text, any other value will place it at the end of the text. No left or right absolute positioning for now.<br/>Example usage. To set the switch is at the end of the text:<br />`switchButton.setSwitchPosition(SwitchButton.SWITCH_END)` |
 | void                                 | toggle()                                                     | Mimics the Switch class's Switch.toggle() method. OK, not really, but has the same result, calling `Switch.toggle()` on the `Switch` component view |
+
+
+<br />
+
+### Copyright, Licensing and Contributions
+
+Copyright (c) 2019 Attila Orosz
+
+SwitchButton is licensed under the MIT license (See license file).
+
+The development of this library happens on [GitLab](https://gitlab.com/atlantic_omnibus/open-source/switch-button), which is an **open source** DevOps platform. The repository automatically gets pushed to GitHub as well for better discoverability. You are welcome to open any issues on GH, but if you want to contribute, please visit the [GitLab repo](https://gitlab.com/atlantic_omnibus/open-source/switch-button).
